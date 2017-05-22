@@ -31,7 +31,7 @@ figcaption {
 	left: 0;
 }
 figcaption:hover {
-	opacity:1;
+	opacity:0.9;
 }
 .block-title {
 	text-align: center;
