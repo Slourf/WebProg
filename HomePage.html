@@ -31,8 +31,7 @@
 	<!-- MONUMENTS -->
 	<h2 class="title">Monuments</h2>
 	<div class="row" style="text-align: center;">
-		<div class="col-lg-4 block">
-			<a href="Eiffel Tower.html">
+		<div class="col-sm-4 block">
 			<div class="shadow col-lg-12" style="text-align: center;">
 				<img src="http://www.francetourisme.fr/media/Visite_tour_eiffel/visite_tour_eiffel_3.jpg">
 				<div class=row>
@@ -48,13 +47,12 @@
 						jsdjqsdhklqsdjlqkds <br>
 						klqshdklqsjdqsd
 					</div>
+					<a href="Eiffel Tower.html"><div class="more">More...</div></a>
 				</figcaption>
 			</div>
-			</a>
 		</div>
 
-		<div class="col-lg-4 block">
-			<a href="#">
+		<div class="col-sm-4 block">
 			<div class="shadow col-lg-12" style="text-align: center;">
 				<img src="http://www.cityzeum.com/images/lieu/bigstock-arc-of-triumph-3173116.jpg">
 				<div class=row>
@@ -70,13 +68,11 @@
 						jsdjqsdhklqsdjlqkds <br>
 						klqshdklqsjdqsd
 					</div>
-					<span style="text-align: right;">More...</span>
+					<a href="#"><div class="more">More...</div></a>
 				</figcaption>
 			</div>
-			</a>
 		</div>
-		<div class="col-lg-4 block">
-			<a href="#">
+		<div class="col-sm-4 block">
 			<div class="shadow col-lg-12" style="text-align: center; float: bottom;">
 				<img src="http://bienvenue.chateauversailles.fr/uploads/sysresourcetranslation/fr/71fda25b999d43cd764aa2c3047f7fa37a483c87.jpg">
 				<div class=row>
@@ -92,17 +88,16 @@
 						jsdjqsdhklqsdjlqkds <br>
 						klqshdklqsjdqsd
 					</div>
+					<a href="#"><div class="more">More...</div></a>
 				</figcaption>
 			</div>
-			</a>
 		</div>
 	</div>
 
 	<!-- RESTAURENTS -->
 	<h2 class="title">Restaurents</h2>
 	<div class="row" style="text-align: center;">
-		<div class="col-lg-4 block">
-			<a href="Eiffel Tower.html">
+		<div class="col-sm-4 block">
 			<div class="shadow col-lg-12" style="text-align: center;">
 				<img src="http://www.francetourisme.fr/media/Visite_tour_eiffel/visite_tour_eiffel_3.jpg">
 				<div class=row>
@@ -111,20 +106,19 @@
 						<strong>Eiffel Tower</strong>
 					</div>
 				</div>
-				<figcaption>		
+				<figcaption>
 					<strong style="text-align: center;">Eiffel Tower</strong>
 					<hr>
 					<div style="text-align: left;">
 						jsdjqsdhklqsdjlqkds <br>
 						klqshdklqsjdqsd
 					</div>
+					<a href="Eiffel Tower.html"><div class="more">More...</div></a>
 				</figcaption>
 			</div>
-			</a>
 		</div>
 
-		<div class="col-lg-4 block">
-			<a href="#">
+		<div class="col-sm-4 block">
 			<div class="shadow col-lg-12" style="text-align: center;">
 				<img src="http://www.cityzeum.com/images/lieu/bigstock-arc-of-triumph-3173116.jpg">
 				<div class=row>
@@ -140,13 +134,11 @@
 						jsdjqsdhklqsdjlqkds <br>
 						klqshdklqsjdqsd
 					</div>
-					<span style="text-align: right;">More...</span>
+					<a href="#"><div class="more">More...</div></a>
 				</figcaption>
 			</div>
-			</a>
 		</div>
-		<div class="col-lg-4 block">
-			<a href="#">
+		<div class="col-sm-4 block">
 			<div class="shadow col-lg-12" style="text-align: center; float: bottom;">
 				<img src="http://bienvenue.chateauversailles.fr/uploads/sysresourcetranslation/fr/71fda25b999d43cd764aa2c3047f7fa37a483c87.jpg">
 				<div class=row>
@@ -162,11 +154,19 @@
 						jsdjqsdhklqsdjlqkds <br>
 						klqshdklqsjdqsd
 					</div>
+					<a href="#"><div class="more">More...</div></a>
 				</figcaption>
 			</div>
-			</a>
 		</div>
 	</div>
+	<script type="text/javascript">
+		$('.shadow').mouseover(function() {
+			$(this).children().css( "color", "white" );
+		})
+		$('.shadow').mouseout(function() {
+			$(this).children().css( "color", "#333" );
+		})
+	</script>
 </div>
 </body>
 </html>
