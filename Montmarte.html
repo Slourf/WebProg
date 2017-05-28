@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	Basilique du Sacré-Coeur de Montmartre</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="HomePage.css">
+	<link rel="stylesheet" type="text/css" href="NavBar.css">
+	<link rel="stylesheet" href="skippr-master/dist/skippr.css">
+	<link rel="stylesheet" type="text/css" href="Monuments.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<style type="text/css">
+		.text-block {
+			background-color: black;
+			box-shadow: 0 3px 6px 0 rgba(0,0,0,0.16);
+			padding: 10px;
+			padding-top: 1px;
+		}
+		.text-block > h2 {
+			margin-top: 10px;
+		}
+	</style>
+
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<h1 class="col-lg-12" style="text-align: center; margin-top: 0; margin-bottom: 0;">
+			<img src="http://www.color-stickers.com/1829-thickbox_default/sticker-france-ville-de-paris-tour-eiffel.jpg" style="width: 200px; height: 200px;">
+		</h1>
+	</div>
+	<!-- NAVBAR -->
+	<div class="row">
+		<ul>
+  			<li><a href="HomePage.html">Home</a></li>
+  			<li><a class="active" href="#monuments">Monuments</a></li>
+  			<li><a href="#restaurents">Restaurents</a></li>
+  			<li><a href="#useful">Useful information</a></li>
+		</ul>
+	</div>
+	<br>
+	<!-- CONTENTE -->
+	<div class="row">
+		<div class="col-lg-6" style="padding-left: 0px;">
+		<div id="container" style="width: 100%; height: 600px; top: 0;">
+    		<div id="theTarget">
+        		<div style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d0/Basilique_du_Sacr%C3%A9-C%C5%93ur_de_Montmartre_2.jpg)"></div>
+        		<div style="background-image: url(http://www.francetourisme.fr/media/Visite_tour_eiffel/visite_tour_eiffel_2.jpg)"></div>
+			</div>	
+		</div>
+		</div>
+		<div class="col-lg-6" style="padding-right: 0px;">
+			<div class="text-block" style="background-color: white;">	
+				<h2>Description</h2>
+				<p>The Sacré-Coeur, consecrated in 1919, is one of the most iconic monuments in Paris. At the top of the Butte Montmarte, it has one of the most beautiful panoramic views of the capital, from 130 metres above ground. In a Roman-Byzantine style, the Sacré Coeur is recognizable by its white colour. Inside the building, the ceiling is decorated with the largest mosaic in France measuring about 480 m². The crypt is also worth a visit. And to go even higher up, visitors can access the dome where the 360° view of Paris is magnificent. A short walk from the Sacré Coeur is the Place du Tertre, the district of Abbesses with its steep, winding roads, and at the bottom of the hill, the famous Moulin Rouge cabaret.
+			</p>
+		</div>
+			<br>
+			<div class="text-block" style="background-color: white;">	
+				<h2>Viewpoint</h2>
+				<p>View of Paris from the dome.</p>
+			</div>
+			<br>
+			<div class="text-block" style="background-color: white;">	
+				<h2>How to go</h2>
+				Subway n°2: Anvers <br>
+				Bus n°30, 31, 54, 80, 85, Montmartrobus
+			</div>
+		</div>
+	</div>
+	<br>	
+	<div class="row">
+		<div class="col-lg-12 shadow">
+			<div id="map"></div>
+		</div>
+	</div>
+	<br>	
+	<br>	
+	<div class="row">
+		<footer>CHATELUS Florian - SARKAR Riday - UMAROV trucmuch</footer>
+	</div>
+
+	<script>
+		function myMap() {
+			var mapOptions = {
+    			center: new google.maps.LatLng(48.88670459999999,2.34310430000005),
+    			zoom: 15,
+    			mapTypeId: google.maps.MapTypeId.ROADMAP,
+    			disableDefaultUI: true
+			}
+			var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+			var marker = new google.maps.Marker({position: mapOptions.center});
+
+			marker.setMap(map);
+		}
+	</script>
+	<script >
+		$(document).ready(function(){
+
+		    	$("#theTarget").skippr({
+		    		transition: 'slide',
+			        speed: 1000,
+			        easing: 'easeOutQuart',
+			        navType: 'block',
+			        childrenElementType: 'div',
+			        arrows: true,
+			        autoPlay: true,
+			        autoPlayDuration: 5000,
+			        keyboardOnAlways: true,
+			        hidePrevious: false
+			    })
+			});
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClOaW8lkIGZQRXByBOo3JI2jV4jlN3f8Y&callback=myMap"></script>
+	<script src="skippr-master/dist/skippr.js"></script>
+</div>
+</body>
+</html>

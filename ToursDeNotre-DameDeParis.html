@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	Tours de Notre-Dame de Paris</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="HomePage.css">
+	<link rel="stylesheet" type="text/css" href="NavBar.css">
+	<link rel="stylesheet" href="skippr-master/dist/skippr.css">
+	<link rel="stylesheet" type="text/css" href="Monuments.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<style type="text/css">
+		.text-block {
+			background-color: black;
+			box-shadow: 0 3px 6px 0 rgba(0,0,0,0.16);
+			padding: 10px;
+			padding-top: 1px;
+		}
+		.text-block > h2 {
+			margin-top: 10px;
+		}
+	</style>
+
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<h1 class="col-lg-12" style="text-align: center; margin-top: 0; margin-bottom: 0;">
+			<img src="http://www.color-stickers.com/1829-thickbox_default/sticker-france-ville-de-paris-tour-eiffel.jpg" style="width: 200px; height: 200px;">
+		</h1>
+	</div>
+	<!-- NAVBAR -->
+	<div class="row">
+		<ul>
+  			<li><a href="HomePage.html">Home</a></li>
+  			<li><a class="active" href="#monuments">Monuments</a></li>
+  			<li><a href="#restaurents">Restaurents</a></li>
+  			<li><a href="#useful">Useful information</a></li>
+		</ul>
+	</div>
+	<br>
+	<!-- CONTENTE -->
+	<div class="row">
+		<div class="col-lg-6" style="padding-left: 0px;">
+		<div id="container" style="width: 100%; height: 600px; top: 0;">
+    		<div id="theTarget">
+        		<div style="background-image: url(https://www.parisinfo.com/var/otcp/sites/images/media/1.-photos/node_230/cath%C3%A9drale-notre-dame-de-paris-interieur-2-%7C-630x405-%7C-%C2%A9-otcp-marc-bertrand-%7C-185-55/10743923-1-fre-FR/Cath%C3%A9drale-Notre-Dame-de-Paris-interieur-2-%7C-630x405-%7C-%C2%A9-OTCP-Marc-Bertrand-%7C-185-55.jpg)"></div>
+        		<div style="background-image: url(http://www.francetourisme.fr/media/Visite_tour_eiffel/visite_tour_eiffel_2.jpg)"></div>
+			</div>	
+		</div>
+		</div>
+		<div class="col-lg-6" style="padding-right: 0px;">
+			<div class="text-block" style="background-color: white;">	
+				<h2>Description</h2>
+				<p>At the top of 402 steps inside the towers of Notre-Dame cathedral, visitors are rewarded with one of the most stunning panoramic views of Paris. Before you climb up, the tour is marked by three not-to-be-missed stops: upstairs has amazing gothic architecture and vaulted warheads; the chimera galleries allow you to get close to the famous gargoyles, including the famous Stryge; and a few steps from the top, stop and admire the belfry, church bells and the famous 14-tonne Emmanuel great bell.
+			</p>
+		</div>
+			<br>
+			<div class="text-block" style="background-color: white;">	
+				<h2>Viewpoint</h2>
+				<p>View of Ile de la Cité, the cathedral itself and Paris.</p>
+			</div>
+			<br>
+			<div class="text-block" style="background-color: white;">	
+				<h2>How to go</h2>
+				Subway n°4: Cité <br>
+				RER B, C: Saint-Michel - Notre-Dame <br>
+				Bus n° 21, 38, 47, 58, 70, 72, 74, 81, 82, Balabus
+			</div>
+		</div>
+	</div>
+	<br>	
+	<div class="row">
+		<div class="col-lg-12 shadow">
+			<div id="map"></div>
+		</div>
+	</div>
+	<br>	
+	<br>	
+	<div class="row">
+		<footer>CHATELUS Florian - SARKAR Riday - UMAROV trucmuch</footer>
+	</div>
+
+	<script>
+		function myMap() {
+			var mapOptions = {
+    			center: new google.maps.LatLng(48.85296820000001,2.3499021000000084),
+    			zoom: 15,
+    			mapTypeId: google.maps.MapTypeId.ROADMAP,
+    			disableDefaultUI: true
+			}
+			var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+			var marker = new google.maps.Marker({position: mapOptions.center});
+
+			marker.setMap(map);
+		}
+	</script>
+	<script >
+		$(document).ready(function(){
+
+		    	$("#theTarget").skippr({
+		    		transition: 'slide',
+			        speed: 1000,
+			        easing: 'easeOutQuart',
+			        navType: 'block',
+			        childrenElementType: 'div',
+			        arrows: true,
+			        autoPlay: true,
+			        autoPlayDuration: 5000,
+			        keyboardOnAlways: true,
+			        hidePrevious: false
+			    })
+			});
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClOaW8lkIGZQRXByBOo3JI2jV4jlN3f8Y&callback=myMap"></script>
+	<script src="skippr-master/dist/skippr.js"></script>
+</div>
+</body>
+</html>
