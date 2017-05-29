@@ -51,7 +51,6 @@
 				</figcaption>
 			</div>
 		</div>
-
 		<div class="col-sm-4 block">
 			<div class="shadow col-lg-12" style="text-align: center;">
 				<img src="http://www.cityzeum.com/images/lieu/bigstock-arc-of-triumph-3173116.jpg">
@@ -91,6 +90,8 @@
 				</figcaption>
 			</div>
 		</div>
+		</div>
+		<div class="row">
 		<div class="col-sm-4 block">
 			<div class="shadow col-lg-12" style="text-align: center; float: bottom;">
 				<img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Basilique_du_Sacr%C3%A9-C%C5%93ur_de_Montmartre_2.jpg">
@@ -220,10 +221,10 @@
 	</div>
 	<script type="text/javascript">
 		$('.shadow').mouseover(function() {
-			$(this).children().css( "color", "white" );
+			$(this).children().find(".block-title").css( "color", "white" );
 		})
 		$('.shadow').mouseout(function() {
-			$(this).children().css( "color", "#333" );
+			$(this).children().find(".block-title").css( "color", "#333" );
 		})
 	</script>
 </div>
